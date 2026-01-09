@@ -17,6 +17,7 @@ const Footer = () => {
             <Heart className="w-4 h-4 text-primary fill-primary" />
             <span>and</span>
             <span className="font-mono text-primary">{"<code />"}</span>
+            <span>from Peru 🇵🇪</span>
           </div>
 
           <div className="font-mono text-sm text-muted-foreground">

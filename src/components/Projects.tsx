@@ -2,12 +2,48 @@ import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
-    title: "Generative AI Agent for Enterprise Analytics",
+    title: "SAP Enterprise GenAI Analytics Agent",
     description:
-      "Intelligent agent with RAG capabilities, SQL generation, and natural language explanations for complex business data analysis.",
-    tags: ["Generative AI", "RAG", "NLP"],
-    stack: ["Python", "LangChain", "OpenAI", "PostgreSQL", "FastAPI"],
-    category: "AI Agent",
+      "Scalable Generative AI agent built with LangChain & LangGraph, deployed on Azure Container Apps. Exposes a Python/FastAPI backend and a Next.js frontend containerized with Docker, secured with Azure ID.",
+    tags: ["Generative AI", "Full Stack", "Azure Cloud"],
+    stack: [
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Docker",
+      "LangChain & LangGraph",
+      "LangSmith",
+      "SAP Datasphere",
+      "Azure Container Apps",
+      "Azure AI Foundry",
+      "Azure Entra ID",
+      "Azure Storage (Blob/Table)",
+    ],
+    category: "Enterprise AI",
+    images: [
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/SAP%20Enterprise%20GenAI%20Analytics%20Agent/Arquitectura.gif",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/SAP%20Enterprise%20GenAI%20Analytics%20Agent/Inicio.png",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/SAP%20Enterprise%20GenAI%20Analytics%20Agent/chat1.png",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/SAP%20Enterprise%20GenAI%20Analytics%20Agent/chat2.png",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/SAP%20Enterprise%20GenAI%20Analytics%20Agent/chat3.png"
+    ],
+    features: [
+      "Text-to-SQL generation connecting to SAP Datasphere for real-time analytics",
+      "Dynamic SQL generation for complex analytical queries",
+      "Automated chart generation stored in Azure Blob Storage",
+      "Audio explanations generated and saved to Azure Blob Storage",
+      "Conversation memory and state management via Azure Table Storage",
+      "Full observability and tracing with LangSmith",
+    ],
+    workflow: [
+      "User asks a business question via the React/Next.js interface",
+      "Agent orchestrates the workflow using LangGraph to plan the response",
+      "Generates SQL to query SAP Datasphere and retrieve relevant business data",
+      "Generates data visualizations (charts) and audio summaries, saving artifacts to Azure Blob Storage",
+      "Returns a comprehensive response with embedded media to the user",
+    ],
   },
   {
     title: "MLOps Pipeline for LLMs",

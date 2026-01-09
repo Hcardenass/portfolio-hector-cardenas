@@ -90,7 +90,7 @@ const Hero = () => {
 
         {/* Tags */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {["Generative AI", "MLOps", "RAG Systems", "SAP Analytics"].map(
+          {["Generative AI", "MLOps", "RAG Systems", "SAP ABAP & Cloud"].map(
             (tag) => (
               <span key={tag} className="tag">
                 {tag}

@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Security
+.env
+
+# Unused
+public/placeholder.svg
+public/robots.txt

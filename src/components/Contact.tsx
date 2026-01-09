@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Send, Mail, Linkedin, Github } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,14 +17,42 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Check if env vars are set
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", message: "" });
+    if (!serviceId || !templateId || !publicKey || 
+        serviceId === 'your_service_id_here' || 
+        templateId === 'your_template_id_here' || 
+        publicKey === 'your_public_key_here') {
+      toast.error("EmailJS not configured. Please check .env file.");
+      console.error("EmailJS environment variables are missing or default.");
+      setIsSubmitting(false);
+      return;
+    }
 
-    setTimeout(() => setIsSubmitted(false), 3000);
+    try {
+      if (formRef.current) {
+        await emailjs.sendForm(
+          serviceId,
+          templateId,
+          formRef.current,
+          publicKey
+        );
+        
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+        toast.success("Message sent successfully!");
+        
+        setTimeout(() => setIsSubmitted(false), 3000);
+      }
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast.error("Failed to send message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -57,23 +88,23 @@ const Contact = () => {
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Whether you're looking to integrate AI into your business,
-                optimize your ML pipelines, or explore SAP analytics—let's
+                optimize your ML pipelines, or develop robust SAP solutions using ABAP, Datasphere, and SAC—let's
                 connect and discuss how we can work together.
               </p>
             </div>
 
             <div className="space-y-4">
               <a
-                href="mailto:hello@hectorcardenas.dev"
+                href="mailto:adriancardenasc19@gmail.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
               >
                 <div className="p-2 rounded-lg bg-card border border-border group-hover:border-primary/50 transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="font-mono text-sm">hello@hectorcardenas.dev</span>
+                <span className="font-mono text-sm">adriancardenasc19@gmail.com</span>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/hector-cardenas-camacho-197101169/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
@@ -84,7 +115,7 @@ const Contact = () => {
                 <span className="font-mono text-sm">LinkedIn</span>
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/Hcardenass"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group"
@@ -99,7 +130,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="md:col-span-3">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"

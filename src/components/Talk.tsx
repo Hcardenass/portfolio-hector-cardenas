@@ -12,11 +12,6 @@ const talkTopics = [
     description: "CI/CD for ML, model monitoring, and scalable deployments",
   },
   {
-    icon: Users,
-    title: "Enterprise Projects",
-    description: "Large-scale implementations and digital transformation",
-  },
-  {
     icon: MessageSquare,
     title: "SAP + AI",
     description: "Integrating AI capabilities within SAP ecosystems",
@@ -92,6 +87,16 @@ const Talk = () => {
               <div className="w-3 h-3 rounded-full bg-green-500" />
               <span className="ml-4 text-muted-foreground">terminal</span>
             </div>
+            
+            <div className="flex justify-center mb-6">
+              <img 
+                src="/photo.jpeg" 
+                alt="Hector Cardenas" 
+                className="w-32 h-32 rounded-full border-4 border-black object-cover"
+                style={{ boxShadow: "var(--terminal-glow)" }}
+              />
+            </div>
+
             <div className="space-y-2">
               <p>
                 <span className="text-primary">$</span> whoami
@@ -103,13 +108,11 @@ const Talk = () => {
                 <span className="text-primary">$</span> cat interests.txt
               </p>
               <p className="text-muted-foreground">
-                ├── Generative AI
-                <br />
-                ├── Large Language Models
+                ├── Generative AI & RAG
                 <br />
                 ├── MLOps & DevOps
                 <br />
-                ├── RAG Systems
+                ├── SAP ABAP & Cloud
                 <br />
                 └── Enterprise Solutions
               </p>
