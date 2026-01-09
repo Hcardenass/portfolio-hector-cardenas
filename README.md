@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+# Hector Cardenas | MLOps Engineer & AI Engineer
 
-## Project info
+Welcome to my professional portfolio. This website showcases my projects and expertise in **Generative AI**, **SAP Enterprise Solutions**, and **MLOps**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 About Me
 
-## How can I edit this code?
+I am an **MLOps & AI Engineer** specialized in designing and building scalable AI solutions. My work bridges the gap between traditional enterprise systems and cutting-edge AI technologies.
 
-There are several ways of editing your application.
+### Core Competencies
+*   **Generative AI:** Agents, RAG Systems, LangChain, LangGraph.
+*   **SAP Ecosystem:** SAP ABAP, SAP Datasphere, SAP Analytics Cloud (SAC).
+*   **Cloud & DevOps:** Azure (Container Apps, AI Foundry), Docker, CI/CD.
+*   **Backend:** Python, FastAPI.
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+This portfolio is built with modern web technologies:
+*   **Frontend:** [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+*   **Language:** [TypeScript](https://www.typescriptlang.org/)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+*   **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+*   **Contact Form:** [EmailJS](https://www.emailjs.com/)
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📂 Featured Projects
 
-**Use your preferred IDE**
+### SAP Enterprise GenAI Analytics Agent
+A scalable Generative AI agent capable of executing complex analytical queries on SAP Datasphere.
+*   **Stack:** Python, FastAPI, Next.js, LangChain, Azure Container Apps.
+*   **Features:** Text-to-SQL, Chart Generation, Audio Summaries.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+*(Explore more projects in the interactive portfolio)*
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📦 Local Development
 
-Follow these steps:
+To run this project locally:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/Hcardenass/portfolio-hector-cardenas.git
+    cd portfolio-hector-cardenas
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3.  **Start the development server**
+    ```bash
+    npm run dev
+    ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 📬 Contact
 
-**Edit a file directly in GitHub**
+*   **Email:** [adriancardenasc19@gmail.com](mailto:adriancardenasc19@gmail.com)
+*   **LinkedIn:** [Hector Cardenas](https://www.linkedin.com/in/hector-cardenas-camacho-197101169/)
+*   **GitHub:** [Hcardenass](https://github.com/Hcardenass)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+*Built with ❤️ from Peru 🇵🇪*
