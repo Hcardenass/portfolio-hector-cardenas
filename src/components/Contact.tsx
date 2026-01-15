@@ -88,7 +88,7 @@ const Contact = () => {
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Ready to start a project? Whether it's AI solutions, data pipelines, 
-                MLOps infrastructure, or SAP integrations—I'm here to help turn your 
+                MLOps infrastructure, or SAP integrations. I'm here to help turn your 
                 ideas into production-ready systems.
               </p>
             </div>

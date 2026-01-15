@@ -47,7 +47,7 @@ const Talk = () => {
               I'm always excited to discuss new ideas, collaborate on challenging
               projects, or share knowledge about AI, Data Engineering, and enterprise solutions.
               Whether you're looking to integrate AI into your business, build scalable data pipelines, 
-              optimize your ML workflows, or develop robust SAP solutions—let's connect and discuss 
+              optimize your ML workflows, or develop robust SAP solutions, let's connect and discuss 
               how we can work together.
             </p>
 
