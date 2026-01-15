@@ -80,7 +80,7 @@ const Hero = () => {
         {/* Roles */}
         <div className="space-y-2 mb-8">
           <p className="text-xl md:text-2xl font-mono text-foreground">
-            MLOps Engineer{" "}
+            Data Engineer <span className="text-primary">|</span> MLOps Engineer{" "}
             <span className="text-primary">&</span> AI Engineer
           </p>
           <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
@@ -90,7 +90,7 @@ const Hero = () => {
 
         {/* Tags */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {["Generative AI", "MLOps", "RAG Systems", "SAP ABAP & Cloud"].map(
+          {["Generative AI", "MLOps", "Data Engineering", "RAG Systems", "SAP ABAP & Cloud"].map(
             (tag) => (
               <span key={tag} className="tag">
                 {tag}

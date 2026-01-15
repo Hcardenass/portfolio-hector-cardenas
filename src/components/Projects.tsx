@@ -77,6 +77,81 @@ const projects = [
       "Generates Response: Outputs the optimal product bundle and persuasive message",
     ],
   },
+  {
+    title: "Real-Time Healthcare Analytics Pipeline",
+    description:
+      "End-to-end real-time data engineering solution for healthcare sector, analyzing patient flow and bed occupancy across hospital departments. Implements a medallion architecture (Bronze-Silver-Gold) with streaming ingestion, PySpark transformations, and star schema modeling for BI analytics.",
+    tags: ["Data Engineering", "Real-Time", "Azure Cloud", "Healthcare"],
+    stack: [
+      "Azure Event Hub",
+      "Azure Databricks",
+      "PySpark",
+      "Azure Data Lake Storage (ADLS Gen2)",
+      "Azure Synapse SQL Pool",
+      "Power BI",
+      "Python 3.11+",
+    ],
+    category: "Data Engineering",
+    githubUrl: "https://github.com/Hcardenass/hospital-patient-flow-analytics",
+    images: [
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/Real-Time%20Healthcare%20Analytics%20Pipeline/Arquitectura.gif",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/Real-Time%20Healthcare%20Analytics%20Pipeline/Simulator.gif",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/Real-Time%20Healthcare%20Analytics%20Pipeline/Streaming-Bronze.gif",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/Real-Time%20Healthcare%20Analytics%20Pipeline/Streaming-Silver.gif",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/Real-Time%20Healthcare%20Analytics%20Pipeline/Ejecuci%C3%B3nCapaGold.gif",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/Real-Time%20Healthcare%20Analytics%20Pipeline/BI.png"
+    ],
+    features: [
+      "Real-Time Ingestion: Streams patient data via Azure Event Hub with custom Python generator",
+      "Medallion Architecture: Bronze (raw JSON) → Silver (cleaned/validated) → Gold (aggregated star schema)",
+      "Star Schema Design: Optimized fact and dimension tables in Synapse SQL Pool for efficient querying",
+      "Interactive Dashboard: Power BI integration with KPIs for bed occupancy, patient flow trends, and department-level metrics",
+      "Scalable ETL: PySpark notebooks in Databricks for distributed data processing",
+    ],
+    workflow: [
+      "Simulate patient flow data and stream to Azure Event Hub in real-time",
+      "Databricks consumes stream and writes raw JSON to Bronze layer (ADLS)",
+      "Silver layer: Clean, validate schema, handle nulls, and structure data",
+      "Gold layer: Aggregate and transform into star schema (FactPatientFlow + Dimensions)",
+      "Load star schema into Synapse SQL Pool for analytics",
+      "Connect Power BI to Synapse for interactive dashboards with filters and KPIs",
+    ],
+  },
+  {
+    title: "Bridge Monitoring DLT Pipeline",
+    description:
+      "Production-grade streaming ETL pipeline using Databricks Delta Live Tables (DLT) to monitor IoT sensors on critical infrastructure. Simulates real-time temperature, vibration, and inclination sensors, processing three raw streams through a medallion architecture with watermarks, windowed aggregations, and stream-static joins.",
+    tags: ["Data Engineering", "Streaming", "IoT", "Databricks"],
+    stack: [
+      "Databricks Delta Live Tables (DLT)",
+      "PySpark",
+      "Delta Lake",
+      "Unity Catalog",
+      "Python 3.11+",
+      "Structured Streaming",
+    ],
+    category: "Data Engineering",
+    githubUrl: "https://github.com/Hcardenass/monitoreo_puentes_dlt_pipeline",
+    images: [
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/Bridge%20Monitoring%20DLT%20Pipeline/Arquitectura.gif",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/Bridge%20Monitoring%20DLT%20Pipeline/DLT%20Databricks.mp4"
+    ],
+    features: [
+      "Declarative DLT Pipelines: Uses @dlt.table decorators for Bronze, Silver, and Gold layers",
+      "Multi-Stream Processing: Ingests 3 parallel IoT streams (temperature, vibration, inclination) with simulated delays",
+      "Data Quality Enforcement: Applies @dlt.expect_or_drop checks in Silver layer for schema validation",
+      "Windowed Aggregations: Calculates 10-minute tumbling window metrics (avg temperature, max vibration/inclination) with 2-minute watermarks",
+      "Stream-Static & Stream-Stream Joins: Enriches sensor data with bridge metadata and joins aggregated metrics by time windows",
+      "Incremental Processing: DLT automatically handles checkpointing and only processes new data",
+    ],
+    workflow: [
+      "Generate synthetic IoT sensor data with random timestamp delays (00_data_generator.ipynb)",
+      "Bronze Layer: Ingest 3 raw Delta streams as they arrive (01_bronze_processing.ipynb)",
+      "Silver Layer: Enrich with static bridge metadata and apply data quality expectations (02_silver_processing.ipynb)",
+      "Gold Layer: Apply watermarks, compute 10-min windowed aggregations, and join streams (03_gold_processing.ipynb)",
+      "Query aggregated metrics via SQL for monitoring dashboards and alerting",
+    ],
+  },
 ];
 
 const Projects = () => {

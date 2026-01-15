@@ -83,13 +83,13 @@ const Contact = () => {
           <div className="md:col-span-2 space-y-6">
             <div>
               <h3 className="font-mono text-xl font-semibold mb-4">
-                Let's build something with{" "}
-                <span className="text-primary">AI</span>
+                Let's build something{" "}
+                <span className="text-primary">together</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Whether you're looking to integrate AI into your business,
-                optimize your ML pipelines, or develop robust SAP solutions using ABAP, Datasphere, and SAC—let's
-                connect and discuss how we can work together.
+                Ready to start a project? Whether it's AI solutions, data pipelines, 
+                MLOps infrastructure, or SAP integrations—I'm here to help turn your 
+                ideas into production-ready systems.
               </p>
             </div>
 

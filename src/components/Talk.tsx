@@ -1,4 +1,4 @@
-import { MessageSquare, Lightbulb, Rocket, Users } from "lucide-react";
+import { MessageSquare, Lightbulb, Rocket, Users, Database } from "lucide-react";
 
 const talkTopics = [
   {
@@ -10,6 +10,11 @@ const talkTopics = [
     icon: Rocket,
     title: "MLOps Architecture",
     description: "CI/CD for ML, model monitoring, and scalable deployments",
+  },
+  {
+    icon: Database,
+    title: "Data Engineering",
+    description: "Real-time pipelines, ETL/ELT, medallion architecture, and cloud platforms",
   },
   {
     icon: MessageSquare,
@@ -40,9 +45,10 @@ const Talk = () => {
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               I'm always excited to discuss new ideas, collaborate on challenging
-              projects, or share knowledge about AI and enterprise solutions.
-              Whether you have a question, a project in mind, or just want to
-              connect—I'd love to hear from you.
+              projects, or share knowledge about AI, Data Engineering, and enterprise solutions.
+              Whether you're looking to integrate AI into your business, build scalable data pipelines, 
+              optimize your ML workflows, or develop robust SAP solutions—let's connect and discuss 
+              how we can work together.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -102,7 +108,7 @@ const Talk = () => {
                 <span className="text-primary">$</span> whoami
               </p>
               <p className="text-muted-foreground">
-                Hector Cardenas - MLOps & AI Engineer
+                Hector Cardenas - Data Engineer | MLOps & AI Engineer
               </p>
               <p className="mt-4">
                 <span className="text-primary">$</span> cat interests.txt
@@ -111,6 +117,8 @@ const Talk = () => {
                 ├── Generative AI & RAG
                 <br />
                 ├── MLOps & DevOps
+                <br />
+                ├── Data Engineering
                 <br />
                 ├── SAP ABAP & Cloud
                 <br />

@@ -3,8 +3,8 @@ import { Brain, Cpu, Database, Layers } from "lucide-react";
 const expertiseAreas = [
   {
     icon: Brain,
-    title: "Generative AI",
-    description: "Building intelligent agents, LLM applications, and conversational AI systems",
+    title: "Generative AI & RAG",
+    description: "Building intelligent agents, LLM applications, RAG systems with vector databases and semantic search",
   },
   {
     icon: Cpu,
@@ -13,8 +13,8 @@ const expertiseAreas = [
   },
   {
     icon: Database,
-    title: "RAG Systems",
-    description: "Vector databases, embeddings, semantic search, and context-aware retrieval",
+    title: "Data Engineering",
+    description: "Real-time streaming pipelines, ETL/ELT workflows, medallion architecture, and cloud data platforms",
   },
   {
     icon: Layers,
@@ -70,7 +70,7 @@ const Portfolio = () => {
         {(() => {
           const stats = [
             { value: "5+", label: "Years Experience" },
-            { value: "3", label: "Projects Developed" },
+            { value: "4", label: "Projects Developed" },
             { value: "∞", label: "Lines of Code" },
           ];
           return (

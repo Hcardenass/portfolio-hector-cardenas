@@ -27,6 +27,7 @@ interface ProjectCardProps {
   features?: string[];
   workflow?: string[];
   images?: string[];
+  githubUrl?: string;
 }
 
 const ProjectCard = ({ 
@@ -37,7 +38,8 @@ const ProjectCard = ({
   category,
   features,
   workflow,
-  images
+  images,
+  githubUrl
 }: ProjectCardProps) => {
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -74,10 +76,18 @@ const ProjectCard = ({
           <span className="text-xs font-mono text-primary bg-primary/10 px-3 py-1 rounded-full">
             {category}
           </span>
-          <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <button className="text-muted-foreground hover:text-primary transition-colors" aria-label="View code">
-              <Github className="w-5 h-5" />
-            </button>
+          <div className="flex gap-3">
+            {githubUrl && (
+              <a 
+                href={githubUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors" 
+                aria-label="View code on GitHub"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+            )}
             
             <Dialog 
               open={isDialogOpen} 
