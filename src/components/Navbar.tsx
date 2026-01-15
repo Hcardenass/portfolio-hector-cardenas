@@ -118,7 +118,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in-up">
+          <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in-up bg-background/95 backdrop-blur-lg relative z-50">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
