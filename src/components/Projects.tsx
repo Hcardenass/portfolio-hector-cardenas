@@ -46,14 +46,6 @@ const projects = [
     ],
   },
   {
-    title: "MLOps Pipeline for LLMs",
-    description:
-      "End-to-end CI/CD pipeline for large language models with automated training, versioning, monitoring, and deployment.",
-    tags: ["MLOps", "LLMs", "DevOps"],
-    stack: ["Kubernetes", "MLflow", "Airflow", "Docker", "AWS"],
-    category: "MLOps",
-  },
-  {
     title: "Cross-Selling AI Agent",
     description:
       "Context-aware AI sales agent that goes beyond simple associations. It analyzes the 'consumption occasion' (Time + Cart + History) to distinguish between scenarios like a 'Friday party' vs a 'Wednesday office snack', maximizing average ticket value while strictly adhering to business rules (e.g., alcohol time restrictions).",
@@ -84,6 +76,14 @@ const projects = [
       "Validates Rules: Filters recommendations based on stock and legal time constraints",
       "Generates Response: Outputs the optimal product bundle and persuasive message",
     ],
+  },
+  {
+    title: "MLOps Pipeline for LLMs",
+    description:
+      "End-to-end CI/CD pipeline for large language models with automated training, versioning, monitoring, and deployment.",
+    tags: ["MLOps", "LLMs", "DevOps"],
+    stack: ["Kubernetes", "MLflow", "Airflow", "Docker", "AWS"],
+    category: "MLOps",
   },
   {
     title: "RAG System over Enterprise Data",
