@@ -167,8 +167,8 @@ const Projects = () => {
             Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="section-subtitle max-w-2xl mx-auto">
-            A selection of AI and MLOps projects showcasing end-to-end solutions,
-            from generative systems to production pipelines.
+            A selection of AI, Data Engineering, and MLOps projects showcasing end-to-end solutions,
+            from generative systems to real-time data pipelines.
           </p>
         </div>
 
