@@ -56,10 +56,34 @@ const projects = [
   {
     title: "Cross-Selling AI Agent",
     description:
-      "Business-oriented AI system designed to increase average ticket through intelligent product recommendations and personalized offers.",
-    tags: ["Generative AI", "Business AI"],
-    stack: ["Python", "TensorFlow", "Redis", "React", "Node.js"],
+      "Context-aware AI sales agent that goes beyond simple associations. It analyzes the 'consumption occasion' (Time + Cart + History) to distinguish between scenarios like a 'Friday party' vs a 'Wednesday office snack', maximizing average ticket value while strictly adhering to business rules (e.g., alcohol time restrictions).",
+    tags: ["Generative AI", "Retail Tech", "Agentic AI", "RAG"],
+    stack: [
+      "Python",
+      "LangChain",
+      "LangGraph",
+      "Supabase (Vector DB)",
+      "OpenAI GPT-4o",
+      "Streamlit",
+    ],
     category: "AI Agent",
+    images: [
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/Cross-Selling%20AI%20Agent/Arquitectura%20Cross%20Selling.png",
+      "https://storage.googleapis.com/gc-bucket-hcardenas-01/Cross-Selling%20AI%20Agent/Explicacion%20Agent%20Cross%20Selling.mp4"
+    ],
+    features: [
+      "Contextual Inference: Distinguishes between 'Party/Previa' (Friday PM) and 'Casual Consumption' (Workday AM)",
+      "Dynamic Guardrails: Automatically enforces 'Dry Law' or time-based alcohol restrictions, suggesting alternatives like mixers or snacks",
+      "Revenue Optimization: Potential ticket increase of +125% to +175% by suggesting relevant bundles (e.g., Beers + Pisco vs. Sodas + Snacks)",
+      "Personalized Copywriting: Generates tone-appropriate messages for WhatsApp/App notifications",
+    ],
+    workflow: [
+      "Analyzes input: Cart items (e.g., Coke + Chips) + Timestamp + Customer Profile",
+      "Infers Occasion: Determines if it's a social gathering, personal craving, or restricted scenario",
+      "Retrieves Products (RAG): Uses embeddings in Supabase to find semantic matches",
+      "Validates Rules: Filters recommendations based on stock and legal time constraints",
+      "Generates Response: Outputs the optimal product bundle and persuasive message",
+    ],
   },
   {
     title: "RAG System over Enterprise Data",

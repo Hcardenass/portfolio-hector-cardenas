@@ -119,25 +119,34 @@ const ProjectCard = ({
                         <div className="w-full flex justify-center">
                           <Carousel className="w-full max-w-lg">
                             <CarouselContent>
-                              {images.map((img, index) => (
-                                <CarouselItem key={index}>
-                                  <div className="p-1">
-                                    <div className={`relative group overflow-hidden rounded-lg border border-border ${index === 0 ? "" : "h-[250px] flex items-center justify-center bg-muted/10"}`}>
-                                      <img
-                                        src={img}
-                                        alt={`${title} screenshot ${index + 1}`}
-                                        className={index === 0 ? "w-full h-auto" : "h-full w-full object-contain"}
-                                      />
-                                      <div 
-                                        className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer"
-                                        onClick={() => setZoomedImage(img)}
-                                      >
-                                        <ZoomIn className="w-8 h-8 text-white drop-shadow-md" />
-                                      </div>
-                                    </div>
-                                  </div>
-                                </CarouselItem>
-                              ))}
+                              {images.map((media, index) => (
+  <CarouselItem key={index}>
+    <div className="p-1">
+      <div className={`relative group overflow-hidden rounded-lg border border-border ${index === 0 ? "" : "h-[250px] flex items-center justify-center bg-muted/10"}`}>
+        {media.endsWith('.mp4') ? (
+          <video controls className="w-full h-auto rounded-lg">
+            <source src={media} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ) : (
+          <>
+            <img
+              src={media}
+              alt={`${title} screenshot ${index + 1}`}
+              className={index === 0 ? "w-full h-auto" : "h-full w-full object-contain"}
+            />
+            <div 
+              className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer"
+              onClick={() => setZoomedImage(media)}
+            >
+              <ZoomIn className="w-8 h-8 text-white drop-shadow-md" />
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  </CarouselItem>
+))}
                             </CarouselContent>
                             <CarouselPrevious />
                             <CarouselNext />
