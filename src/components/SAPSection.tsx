@@ -80,7 +80,6 @@ const SAPSection = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {[
               "SAP S/4HANA",
-              "SAP BTP",
               "Datasphere",
               "SAC",
               "ABAP",

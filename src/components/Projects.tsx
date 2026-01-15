@@ -58,7 +58,7 @@ const projects = [
       "OpenAI GPT-4.1",
       "Streamlit",
     ],
-    category: "AI Agent",
+    category: "Retail AI Agent",
     images: [
       "https://storage.googleapis.com/gc-bucket-hcardenas-01/Cross-Selling%20AI%20Agent/Arquitectura%20Cross%20Selling.png",
       "https://storage.googleapis.com/gc-bucket-hcardenas-01/Cross-Selling%20AI%20Agent/Explicacion%20Agent%20Cross%20Selling.mp4"
@@ -76,38 +76,6 @@ const projects = [
       "Validates Rules: Filters recommendations based on stock and legal time constraints",
       "Generates Response: Outputs the optimal product bundle and persuasive message",
     ],
-  },
-  {
-    title: "MLOps Pipeline for LLMs",
-    description:
-      "End-to-end CI/CD pipeline for large language models with automated training, versioning, monitoring, and deployment.",
-    tags: ["MLOps", "LLMs", "DevOps"],
-    stack: ["Kubernetes", "MLflow", "Airflow", "Docker", "AWS"],
-    category: "MLOps",
-  },
-  {
-    title: "RAG System over Enterprise Data",
-    description:
-      "Production-ready retrieval-augmented generation system with vector database, semantic embeddings, and context control.",
-    tags: ["RAG", "Vector DB", "Embeddings"],
-    stack: ["Pinecone", "OpenAI", "Python", "FastAPI", "Redis"],
-    category: "RAG System",
-  },
-  {
-    title: "Real-time ML Monitoring Dashboard",
-    description:
-      "Comprehensive monitoring solution for ML models in production with drift detection, performance metrics, and alerting.",
-    tags: ["MLOps", "Monitoring"],
-    stack: ["Grafana", "Prometheus", "Python", "React", "TimescaleDB"],
-    category: "MLOps",
-  },
-  {
-    title: "Conversational AI for Customer Support",
-    description:
-      "Multi-turn conversational agent with memory, context awareness, and seamless human handoff capabilities.",
-    tags: ["Generative AI", "NLP", "Chatbot"],
-    stack: ["LangChain", "GPT-4", "Redis", "WebSocket", "React"],
-    category: "AI Agent",
   },
 ];
 

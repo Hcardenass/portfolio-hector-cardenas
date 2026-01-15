@@ -67,25 +67,30 @@ const Portfolio = () => {
         </div>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
+        {(() => {
+          const stats = [
             { value: "5+", label: "Years Experience" },
-            { value: "20+", label: "Projects Delivered" },
-            { value: "10+", label: "AI Models Deployed" },
+            { value: "3", label: "Projects Developed" },
             { value: "∞", label: "Lines of Code" },
-          ].map((stat, index) => (
-            <div
-              key={stat.label}
-              className="text-center p-6 rounded-xl bg-card border border-border animate-fade-in-up"
-              style={{ animationDelay: `${(index + 4) * 100}ms` }}
-            >
-              <div className="font-mono text-3xl md:text-4xl font-bold text-primary mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
+          ];
+          return (
+            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className="text-center p-6 rounded-xl bg-card border border-border animate-fade-in-up"
+                  style={{ animationDelay: `${(index + 4) * 100}ms` }}
+                >
+                  <div className="font-mono text-3xl md:text-4xl font-bold text-primary mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          );
+        })()}
+
 
         <div className="text-center mt-16 font-mono text-primary text-sm">
           {"</portfolio>"}
