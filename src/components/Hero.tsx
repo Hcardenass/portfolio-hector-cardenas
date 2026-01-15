@@ -61,7 +61,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="text-center z-10">
+      <div className="text-center relative">
         {/* Terminal prompt */}
         <div className="mb-6 font-mono text-muted-foreground text-sm md:text-base">
           <span className="text-primary">{">"}</span> whoami
