@@ -63,7 +63,7 @@ const projects = [
       "LangChain",
       "LangGraph",
       "Supabase (Vector DB)",
-      "OpenAI GPT-4o",
+      "OpenAI GPT-4.1",
       "Streamlit",
     ],
     category: "AI Agent",
